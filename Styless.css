@@ -79,7 +79,7 @@
   }
   section {
     height: 150vh;
-    background: url('_login/drinkseason.jpg') no-repeat;
+    background: url('drinkseason.jpg') no-repeat;
     background-position-y: -220px;
     background-size: cover;
     background-color: rgb(11, 10, 10);
