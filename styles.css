@@ -8,26 +8,28 @@
     --purple-blc : #175431dd;
     --shadow : 0 5px 10px 5px rgba(0, 0, 0, .3);
     --navColor : linear-gradient(to right, rgba(1, 1, 1, 0.6)5%, rgba(29, 41, 33, 0.9));
-  }
+}
  
-  * {
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
-  }
-  body {
-    font-family: 'Lora', serif;
+}
 
-  }
-  nav {
+body {
+    font-family: 'Lora', serif;
+}
+
+nav {
     position: absolute;
     background: var(--navColor);
     box-shadow: var(--shadow);
     height: 80px;
     width: 100%;
-  }
-  label.logo {
+}
+
+label.logo {
     color: var(--white);
     font-size: 30px;
     line-height: 80px;
@@ -37,96 +39,199 @@
     font-style: italic;
     transition: .2s ease;
     text-shadow: 3px 5px 20px #230622aa;
-  }
-  nav ul {
+}
+
+nav ul {
     float: right;
     margin-right: 80px;
-  }
-  nav ul li {
+}
+
+nav ul li {
     display: inline-block;
     line-height: 80px;
-  }
-  nav ul li a {
+}
+
+nav ul li a {
     color: var(--white);
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 13px;
     text-transform: lowercase;
-  }
-  a.active, a:hover {
+}
+
+a.active, a:hover {
     background: var(--purple);
     transition: .5s;
-  }
-  .checkbtn {
+}
+
+.checkbtn {
     line-height: 80px;
     font-size: 30px;
     float: right;
     cursor: pointer;
     margin-right: 40px;
     display: none;
-  }
-  .checkbtn i {
+}
+
+.checkbtn i {
     color: var(--white);
     padding: 5px;
     border-radius: 10px;
     transition: .5s ease;
-  }
-  .checkbtn i:hover {
+}
+
+.checkbtn i:hover {
     background: var(--purple);
-  }
-  #check {
+}
+
+#check {
     display: none;
-  }
-  section {
-    height: 150vh;
-    background: url('drinkseason.jpg') no-repeat;
-    background-position-y: -220px;
-    background-size: cover;
-    background-color: rgb(11, 10, 10);
-  }
-  
-  /* responsove code */
-  @media (max-width: 952px) {
-    /* table mode */
+}
+
+section {
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('drinkseason.jpg') no-repeat center center/cover;
+}
+
+.content {
+    text-align: center;
+    color: var(--white);
+}
+
+.content h1 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+.green-line {
+  width: 400px;
+  height: 4px;
+  background-color: #1B3F0A;
+  margin: 10px auto;
+  border: none;
+  margin: 10px auto 20px auto;
+}
+
+.tagline {
+    font-size: 50px;
+    margin: 30px 0;
+}
+
+.description {
+    font-size: 16px;
+    margin: 30px 0 30px 0;
+    max-width: 600px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    width: 269px;
+    height: 56px;
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid #1B3F0A;
+    border-radius: 15px;
+}
+
+.btn1 {
+    width: 269px;
+    height: 56;
+    padding: 10px 20px;
+    border: none;
+    background-color: #1B3F0A;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+.btn:hover {
+    background-color: var(--purple);
+}
+
+/* Responsive code */
+@media (max-width: 952px) {
     label.logo {
-      font-size: 25px;
-      padding-left: 50px;
+        font-size: 25px;
+        padding-left: 50px;
     }
     nav ul li a {
-      font-size: 14px;
+        font-size: 14px;
     }
-  }
-  
-  @media (max-width: 858px) {
-    /* mobile mode */
+}
+
+@media (max-width: 858px) {
     .checkbtn {
-      display: block;
+        display: block;
     }
-     ul {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: var(--purple-blc);
-      top: 80px;
-      left: -100%;
-      padding-top: 80px;
-      text-align: center;
-      transition: .5s ease;
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--purple-blc);
+        top: 80px;
+        left: -100%;
+        padding-top: 80px;
+        text-align: center;
+        transition: .5s ease;
     }
     nav ul li {
-      display: block;
-      margin: 30px 0;
-      line-height: 30px;
+        display: block;
+        margin: 30px 0;
+        line-height: 30px;
     }
     nav ul li a {
-      font-size: 20px;
+        font-size: 20px;
     }
     a.active, a:hover {
-      background: none;
-      color: var(--blue);
-      text-shadow: 0 10px 15px var(--blue);
+        background: none;
+        color: var(--blue);
+        text-shadow: 0 10px 15px var(--blue);
     }
     #check:checked ~ ul {
-      left: 0;
+        left: 0;
     }
-  }
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 30px;
+    }
+    .green-line {
+        width: 300px;
+    }
+    .tagline {
+        font-size: 30px;
+    }
+    .description {
+        font-size: 14px;
+        margin: 20px 0 20px 0;
+        padding: 0 10px; /* Adicionando padding para melhor visualização em telas menores */
+    }
+    .btn, .btn1 {
+        width: 80%; /* Ajustando a largura para ocupar 80% da tela */
+        height: auto;
+        font-size: 14px;
+    }
+    .buttons {
+      align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
